@@ -94,9 +94,15 @@ a.wcard:hover .wh{background:var(--gold)}
 .tcard .worry{margin:0 0 14px;padding-bottom:12px;border-bottom:1px solid var(--line);color:var(--note-ink);font-size:12.5px;line-height:1.7}
 .tcard b{display:block;margin-bottom:10px;color:var(--gold-ink);font-size:15px;line-height:1.6}
 .tcard span.d{color:var(--ink-soft);font-size:13px;text-align:left}
-.ans{margin:0 0 20px;padding:16px 20px;border-left:3px solid #897367;background:var(--note-bg);font-size:15px;font-weight:600;line-height:1.85}
-.facts{margin:0 0 6px;padding-left:1.25em;color:var(--ink-soft);font-size:13.5px}
-.facts li{margin-bottom:7px}
+.ans{margin:0 0 20px;padding:16px 20px;border-left:3px solid var(--gold);background:var(--note-bg);font-size:15px;font-weight:600;line-height:1.85}
+.facts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:0 0 6px; padding:0; list-style:none; color:var(--ink-soft); font-size:13px; line-height:1.8; }
+.facts > li { box-sizing:border-box; min-width:0; margin:0; padding:20px 18px; border:1px solid var(--line); background:var(--note-bg); overflow-wrap:anywhere; }
+.facts > li::before { content:""; display:block; width:24px; height:2px; margin-bottom:10px; background:var(--gold); }
+.facts .fact-key { color:var(--gold-ink); font-size:14.5px; font-weight:700; }
+.facts.facts--gap { margin-top:20px; }
+@media (max-width:640px) {
+  .facts { grid-template-columns:minmax(0,1fr); }
+}
 .src{margin:14px 0 0;color:var(--note-ink);font-size:11.5px}
 a:focus-visible,.cta:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 </style></head><body><main class="page">
@@ -241,10 +247,10 @@ a:focus-visible,.cta:focus-visible{outline:2px solid var(--gold);outline-offset:
 <h3 id="q-tsuhan">ジュエリーのアウトレット通販はありますか？</h3>
 <p class="ans">はい。東京ジュエリーインデックスのオンラインショップで、K18・K10・プラチナなどの地金に、ダイヤモンドをはじめとする宝石をあしらったアウトレットジュエリーを販売しています。送料無料でお届けします。</p>
 <ul class="facts">
-  <li>ネックレス、リング（指輪）、ピアス・イヤリング、ブレスレットを取り扱っています。</li>
-  <li>運営は1977年創業の株式会社オリエント4C's。東京・御徒町を拠点に、ジュエリーの製造・卸・販売までを一貫して手がけてきた宝飾専門企業です。</li>
-  <li>送料は無料です。配送業者はヤマト運輸で、通常2〜4営業日で出荷します。</li>
-  <li>ご購入いただいたジュエリーには、専用ギフトボックス・専用紙袋をすべてにお付けします。</li>
+  <li><strong class="fact-key">ネックレス、リング（指輪）、ピアス・イヤリング、ブレスレット</strong>を取り扱っています。</li>
+  <li>運営は<strong class="fact-key">1977年創業の株式会社オリエント4C's</strong>。東京・御徒町を拠点に、ジュエリーの製造・卸・販売までを一貫して手がけてきた宝飾専門企業です。</li>
+  <li><strong class="fact-key">送料は無料です。</strong>配送業者はヤマト運輸で、通常2〜4営業日で出荷します。</li>
+  <li>ご購入いただいたジュエリーには、<strong class="fact-key">専用ギフトボックス・専用紙袋</strong>をすべてにお付けします。</li>
 </ul>
 <div class="cta-wrap"><a class="cta" href="https://shop.tj-index.com/c/all-outlet">アウトレット商品を見る</a></div>
 </section>
@@ -256,12 +262,12 @@ a:focus-visible,.cta:focus-visible{outline:2px solid var(--gold);outline-offset:
 <h3 id="q-hinshitsu">アウトレット品は正規品ですか？</h3>
 <p class="ans">シーズン終了や在庫調整により、品質はそのままに価格だけを見直した商品です。全品に、当店での購入を証明する品質証明書が付きます。</p>
 <ul class="facts">
-  <li>運営会社は1977年創業のジュエリー卸会社で、累計3,000社との取引実績があります。</li>
-  <li>アウトレット価格になっているのは、シーズン終了や在庫調整によるものです。品質はそのままに、価格だけを見直しています。</li>
-  <li>運営会社は自社工場と職人の技術を活かしたものづくりを強みとし、全国の宝飾店との長年の取引実績があります。</li>
-  <li>工房には一級貴金属装身具製作技能士の資格を持つ職人が在籍し、制作や修理を担っています。</li>
-  <li>運営会社の加工実績は50万件以上です。</li>
-  <li>品質証明書は、修理やお問い合わせの際にご利用いただけます。</li>
+  <li>運営会社は1977年創業のジュエリー卸会社で、<strong class="fact-key">累計3,000社との取引実績</strong>があります。</li>
+  <li>アウトレット価格になっているのは、<strong class="fact-key">シーズン終了や在庫調整</strong>によるものです。品質はそのままに、価格だけを見直しています。</li>
+  <li>運営会社は<strong class="fact-key">自社工場と職人の技術</strong>を活かしたものづくりを強みとし、全国の宝飾店との長年の取引実績があります。</li>
+  <li>工房には<strong class="fact-key">一級貴金属装身具製作技能士</strong>の資格を持つ職人が在籍し、制作や修理を担っています。</li>
+  <li>運営会社の<strong class="fact-key">加工実績は50万件以上</strong>です。</li>
+  <li><strong class="fact-key">品質証明書</strong>は、修理やお問い合わせの際にご利用いただけます。</li>
 </ul>
 </section>
 
@@ -276,9 +282,9 @@ a:focus-visible,.cta:focus-visible{outline:2px solid var(--gold);outline-offset:
   <div class="reason"><b>シーズン終了・在庫調整</b><span>シーズン終了や在庫調整により、品質はそのままに、価格だけを見直しています。</span></div>
   <div class="reason"><b>職人と品質証明書</b><span>工房には一級技能士の資格を持つ職人が在籍しています。オンラインショップのすべての商品に、品質証明書をお付けしています。</span></div>
 </div>
-<ul class="facts" style="margin-top:20px">
-  <li>取り扱いはK18・K10・プラチナなどの地金に、ダイヤモンドをはじめとする宝石をあしらったジュエリーです。</li>
-  <li>弊社商品は1点ものを多く取り扱っております。</li>
+<ul class="facts facts--gap">
+  <li>取り扱いは<strong class="fact-key">K18・K10・プラチナ</strong>などの地金に、ダイヤモンドをはじめとする宝石をあしらったジュエリーです。</li>
+  <li>弊社商品は<strong class="fact-key">1点もの</strong>を多く取り扱っております。</li>
 </ul>
 </section>
 
